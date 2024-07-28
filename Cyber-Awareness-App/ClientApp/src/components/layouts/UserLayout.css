@@ -1,0 +1,99 @@
+﻿/* LoggedInLayout.css */
+.layout {
+    display: flex;
+    height: 100vh; 
+    overflow: hidden; 
+}
+
+.logo {
+    max-height: 30px;
+    margin-right: 10px;
+}
+
+.sidebar {
+    min-width: 160px;
+    width: 18vw;
+    flex: 0 0 18vw; 
+    background-color: #f8f9fa;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 5px 0px 5px rgba(0, 0, 0, 0.2);
+    height: 100%; 
+    align-items: center;
+    overflow: auto; 
+}
+
+    .sidebar img {
+        height: 60px;
+        width: auto;
+        object-fit: contain;
+    }
+
+    .sidebar .top {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .sidebar .top-group {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        height: 50%;
+        font-size: 22px; 
+        padding: 20px; 
+        line-height: 2;
+        
+    }
+
+    .sidebar a {
+        color: #495057;
+        text-decoration: none;
+        transition: all 0.2s linear;
+        text-align: center;
+        margin: 25px 0;
+        border-radius: 5px;
+        border: 1px solid white;
+        width: 100%;
+    }
+
+        .sidebar a:hover {
+            background-color: white;
+            color: var(--primary-color);
+            border: 1px solid var(--primary-color);
+        }
+
+    .sidebar .top-group .active-link {
+        background-color: var(--primary-color);
+        color: white;
+        border-radius: 5px;
+    }
+
+    .sidebar .bottom {
+        margin-top: auto;
+    }
+
+.logout-button {
+    background-color: var(--primary-color);
+    color: white;
+    transition: all 0.2s linear;
+    padding: 10px 20px;
+    line-height: 1.5;
+    font-size: 22px;
+    width: 100%;
+    border: none;
+    border-radius: 5px;
+    border: 1px solid var(--primary-color);
+}
+
+    .logout-button:hover {
+        background-color: white;
+        color: var(--primary-color);
+    }
+
+.content {
+    flex-grow: 1;
+    padding: 20px;
+    overflow: auto; 
+}

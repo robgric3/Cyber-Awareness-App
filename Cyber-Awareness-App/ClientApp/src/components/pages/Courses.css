@@ -1,0 +1,137 @@
+﻿/* Courses.css */
+.course-details {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.course-card-container {
+    display: grid;
+    grid-template-areas:
+        "title title title"
+        "content content content"
+        "back . quiz";
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 20px;
+}
+
+.course-card {
+    box-shadow: 0px 0px 10px 2px rgba(0,0,0,0.1);
+    border-radius: 5px;
+    padding: 20px;
+}
+
+    .course-card h2, .course-card p {
+        text-align: center;
+        margin: 0;
+    }
+
+    .course-card button {
+        display: block;
+        margin: 20px auto 0;
+        background-color: #32BC95;
+        color: white;
+        border: none;
+        padding: 10px 10px;
+        border-radius: 5px;
+    }
+
+        .course-card button:hover {
+            background-color: white;
+            color: #32BC95;
+        }
+
+.back-button, .quiz-button {
+    grid-area: back;
+    justify-self: start; /* Aligns the button to the left */
+}
+
+.quiz-button {
+    grid-area: quiz;
+    justify-self: end; /* Aligns the button to the right */
+}
+
+.content-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%; /* Ensure the container takes up the full width of the grid cell */
+    padding: 0 20px; /* Add horizontal padding */
+}
+
+.side-button {
+    width: 100px; /* Adjust as needed */
+    margin-left: 20px; /* Add top margin */
+    margin-right: 20px; /* Add bottom margin */
+}
+
+/* Add to Courses.css */
+.quiz-container {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    text-align: center;
+}
+
+.quiz-question {
+    margin-bottom: 20px;
+}
+
+.quiz-options {
+    margin-bottom: 20px;
+}
+
+.quiz-navigation {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 60px;
+}
+.quiz-title,
+.quiz-question {
+    text-align: center;
+    padding: 25px;
+}
+
+.quiz-option-button {
+    display: block;
+    width: 75%;
+    margin-bottom: 10px;
+    background-color: #32BC95;
+    color: white;
+    transition: all 0.2s linear;
+    border: none;
+    border-radius: 5px;
+    border: 1px solid #32BC95;
+}
+
+    .quiz-option-button:hover {
+        background-color: white;
+        color: #32BC95;
+    }
+
+    .quiz-option-button.selected {
+        background-color: white;
+        color: #32BC95;
+    }
+
+.quiz-options-grid {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 10px;
+    justify-items: center;
+
+}
+
+.quiz-progress .progress-bar {
+    background-color: #32BC95; /* Change this to the color of your buttons */
+}
+
+.quiz-completed {
+    text-align: center;
+    padding: 20px;
+}
+
+    .quiz-completed > * {
+        margin-bottom: 20px;
+    }
