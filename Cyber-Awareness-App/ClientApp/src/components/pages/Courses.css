@@ -1,5 +1,4 @@
-﻿/* Courses.css */
-.course-details {
+﻿.course-details {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -30,7 +29,7 @@
     .course-card button {
         display: block;
         margin: 20px auto 0;
-        background-color: #32BC95;
+        background-color: var(--primary-color);
         color: white;
         border: none;
         padding: 10px 10px;
@@ -39,7 +38,7 @@
 
         .course-card button:hover {
             background-color: white;
-            color: #32BC95;
+            color: var(--primary-color);
         }
 
 .back-button, .quiz-button {
@@ -57,16 +56,16 @@
     justify-content: space-between;
     align-items: center;
     width: 100%; /* Ensure the container takes up the full width of the grid cell */
-    padding: 0 20px; /* Add horizontal padding */
+    padding: 0 20px; 
 }
 
 .side-button {
-    width: 100px; /* Adjust as needed */
-    margin-left: 20px; /* Add top margin */
-    margin-right: 20px; /* Add bottom margin */
+    width: 100px; 
+    margin-left: 20px; 
+    margin-right: 20px;
 }
 
-/* Add to Courses.css */
+
 .quiz-container {
     max-width: 600px;
     margin: 0 auto;
@@ -97,12 +96,12 @@
     display: block;
     width: 75%;
     margin-bottom: 10px;
-    background-color: #32BC95;
+    background-color: var(--primary-color);
     color: white;
     transition: all 0.2s linear;
     border: none;
     border-radius: 5px;
-    border: 1px solid #32BC95;
+    border: 1px solid var(--primary-color);
 }
 
     .quiz-option-button:hover {
@@ -124,7 +123,7 @@
 }
 
 .quiz-progress .progress-bar {
-    background-color: #32BC95; /* Change this to the color of your buttons */
+    background-color: var(--primary-color);
 }
 
 .quiz-completed {

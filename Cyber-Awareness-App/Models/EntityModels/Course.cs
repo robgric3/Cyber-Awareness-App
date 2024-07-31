@@ -1,7 +1,7 @@
 ﻿using System.ComponentModel.DataAnnotations.Schema;
 using System.ComponentModel.DataAnnotations;
 
-namespace Cyber_Awareness_App.Models
+namespace Cyber_Awareness_App.Models.EntityModels
 {
     public class Course
     {

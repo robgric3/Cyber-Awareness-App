@@ -1,4 +1,4 @@
-﻿namespace Cyber_Awareness_App.Models
+﻿namespace Cyber_Awareness_App.Models.DTOs
 {
     public class LoginData
     {

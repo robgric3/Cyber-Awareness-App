@@ -1,4 +1,3 @@
-// AppRoutes.js
 import { UsersPage } from "./components/pages/UsersPage";
 import { Home } from "./components/pages/Home";
 import { Login } from "./components/pages/Login";

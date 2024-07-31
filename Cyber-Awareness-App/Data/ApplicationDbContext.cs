@@ -1,4 +1,4 @@
-﻿using Cyber_Awareness_App.Models;
+﻿using Cyber_Awareness_App.Models.EntityModels;
 using Microsoft.EntityFrameworkCore;
 
 public class ApplicationDbContext : DbContext
@@ -13,8 +13,6 @@ public class ApplicationDbContext : DbContext
     public DbSet<Question> Questions { get; set; }
     public DbSet<Option> Options { get; set; }
     public DbSet<UserCourse> UserCourses { get; set; }
-    //public DbSet<UserCourse> UserCourses { get; set; }
-    //public DbSet<QuizAttempt> QuizAttempts { get; set; }
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
@@ -24,6 +22,5 @@ public class ApplicationDbContext : DbContext
         modelBuilder.Entity<Option>().ToTable("options");
         modelBuilder.Entity<UserCourse>().ToTable("usercourses");
 
-        // Add similar lines for your other tables
     }
 }

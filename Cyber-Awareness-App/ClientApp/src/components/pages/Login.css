@@ -51,3 +51,8 @@
         width: 37.5rem;
     }
 }
+
+.custom-button.disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+}

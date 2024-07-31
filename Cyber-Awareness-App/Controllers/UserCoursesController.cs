@@ -1,7 +1,8 @@
 ﻿using Microsoft.AspNetCore.Mvc;
-using Cyber_Awareness_App.Models;
 using System.Threading.Tasks;
 using Microsoft.EntityFrameworkCore;
+using Cyber_Awareness_App.Models.DTOs;
+using Cyber_Awareness_App.Models.EntityModels;
 
 namespace Cyber_Awareness_App.Controllers
 {
@@ -58,8 +59,6 @@ namespace Cyber_Awareness_App.Controllers
                 .ToListAsync();
         }
 
-        // This is an example of a GET method for a specific UserCourse
-        // You might need to adjust this based on your actual implementation
         [HttpGet("{id}")]
         public async Task<ActionResult<UserCourse>> GetUserCourse(int id)
         {

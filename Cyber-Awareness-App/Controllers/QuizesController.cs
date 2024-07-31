@@ -1,4 +1,4 @@
-﻿using Cyber_Awareness_App.Models;
+﻿using Cyber_Awareness_App.Models.EntityModels;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using System.Collections.Generic;

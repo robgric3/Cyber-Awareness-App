@@ -10,6 +10,7 @@ export function Login() {
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
     const [error, setError] = useState(null);
+    const [isProcessing, setIsProcessing] = useState(false);
 
     const navigate = useNavigate();
     const location = useLocation();
@@ -30,6 +31,7 @@ export function Login() {
     }
 
     const handleLogin = () => {
+        setIsProcessing(true);
         fetch('https://localhost:7190/users/login', {
             method: 'POST',
             headers: {
@@ -49,6 +51,9 @@ export function Login() {
             })
             .catch(error => {
                 setError('Wrong username or password, please try again');
+            })
+            .finally(() => {
+                setIsProcessing(false);
             });
     };
 
@@ -69,7 +74,9 @@ export function Login() {
                             </h1>
                             <input type="email" placeholder="Email" value={email} onChange={e => setEmail(e.target.value)} className="login-input" />
                             <input type="password" placeholder="Password" value={password} onChange={e => setPassword(e.target.value)} className="login-input" />
-                            <p className="custom-button" onClick={handleLogin}> Log in </p>
+                            <p className={`custom-button ${isProcessing ? 'disabled' : ''}`} onClick={!isProcessing ? handleLogin : null}>
+                                {isProcessing ? 'Processing...' : 'Log in'}
+                            </p>
                             {error && <p>{error}</p>}
                         </CardBody>
                     </Card>

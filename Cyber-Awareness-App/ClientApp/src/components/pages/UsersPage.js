@@ -9,7 +9,6 @@ export class UsersPage extends Component {
     }
 
     componentDidMount() {
-        // Replace '/api/users' with your actual API endpoint
         fetch('https://localhost:7190/users')
             .then(response => {
                 if (!response.ok) {

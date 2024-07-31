@@ -1,9 +1,9 @@
 ﻿import React, { useState, useEffect, useCallback } from 'react';
 import { useQuiz } from '../../hooks/useQuiz';
-import { CourseList } from '../../components/CourseList';
-import { CourseDetails } from '../../components/CourseDetails';
-import { Quiz } from '../../components/Quiz';
-import { COURSES_API_URL, COURSE_COLORS } from '../../quizConstants';
+import { CourseList } from '../../components/courseComponents/CourseList';
+import { CourseDetails } from '../../components/courseComponents/CourseDetails';
+import { Quiz } from '../../components/courseComponents/Quiz';
+import { COURSES_API_URL, COURSE_COLORS } from '../../constants/quizConstants';
 import './Courses.css'; 
 
 export function Courses() {
